@@ -6,4 +6,4 @@ STUNT_BINARY="https://s3-us-west-2.amazonaws.com/stunt-artifacts/stunt-1.tar.gz"
 STUNT_VENDOR="vendor/stunt"
 
 mkdir -p $1/$STUNT_VENDOR
-curl $STUNT_BINARY -o - | tar -xz -C $1/$STUNT_VENDOR -f -
+curl -s $STUNT_BINARY -o - | tar -xz -C $1/$STUNT_VENDOR -f -
