@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat << EOF
+---
+default_process_types:
+  web: vendor/stunt/bin/moo Stunt.db
+EOF
