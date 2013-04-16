@@ -3,5 +3,5 @@
 cat << EOF
 ---
 default_process_types:
-  web: vendor/stunt/bin/moo Stunt.db /dev/null -p $PORT
+  web: vendor/stunt/bin/moo Stunt.db /dev/null -p \$PORT
 EOF
