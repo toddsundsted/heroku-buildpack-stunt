@@ -1,8 +1,14 @@
 #!/bin/sh
 
-if [ -f $1/Stunt.db ]; then
-  echo "Stunt"
-  exit 0
+DB=`ls $1/*.db 2> /dev/null | head -n1`
+
+if [ $DB ]; then
+  if head -n1 $DB 2> /dev/null | egrep -q '\*\* LambdaMOO Database, Format Version [0-9]+ \*\*'; then
+    echo "Stunt"
+    exit 0
+  else
+    exit 1
+  fi
 else
-  exit 1
+  exit 2
 fi
