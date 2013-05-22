@@ -5,5 +5,5 @@ DB=`ls $1/*.db 2> /dev/null | head -n1`
 cat << EOF
 ---
 default_process_types:
-  web: vendor/stunt/bin/moo $DB /dev/null -p \$PORT
+  web: vendor/stunt/bin/moo `basename $DB` /dev/null -p \$PORT
 EOF

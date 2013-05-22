@@ -6,7 +6,7 @@ indent() {
 
 DB=`ls $1/*.db 2> /dev/null | head -n1`
 
-echo "-----> Found $DB"
+echo "-----> Found `basename $DB`"
 
 STUNT_BINARY="https://s3-us-west-2.amazonaws.com/stunt-artifacts/stunt.tar.gz"
 STUNT_VENDOR="vendor/stunt"
